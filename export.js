@@ -14,8 +14,8 @@ const url = 'localhost:27017';
 
 let directory = "./exports";
 let collections = ['test', 'test1'];
-
-let limit = 10 //max number of documents per collection, to be exported
+const limit = 10 //max number of documents per collection, to be exported
+const reverse = false;
 
 const uri = `mongodb://${user}:${pass}@${url}/${database}`;
 
@@ -38,7 +38,11 @@ async function colelctionExport() {
 
         for await (collect_name of collections) {
             collection = db.collection(collect_name);
-            result = collection.find({}).limit(limit);
+            result = collection.find({});
+            if(reverse)
+                result = result.sort({_id:-1})
+
+            result = result.limit(limit);
             data = await result.toArray();
 
             if (data) {
