@@ -1,0 +1,25 @@
+{
+  "name": "mongoexport",
+  "version": "1.0.0",
+  "description": "",
+  "main": "export.js",
+  "dependencies": {
+    "mongodb": "^3.6.3",
+    "mongodb-schema": "^8.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vprak87/mongoexport.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vprak87/mongoexport/issues"
+  },
+  "homepage": "https://github.com/vprak87/mongoexport#readme"
+}
