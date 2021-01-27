@@ -104,6 +104,6 @@ dist
 .tern-port
 
 #export dir
-exports_*
-exports_*/*
+#exports_*
+#exports_*/*
 
